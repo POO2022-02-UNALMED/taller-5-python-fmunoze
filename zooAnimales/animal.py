@@ -18,13 +18,7 @@ class Animal:
     
     @classmethod
     def totalPorTipo(cls):
-        str = f'''
-        Mamiferos: {Mamifero.cantidadMamiferos()}\n
-        Aves: {Ave.cantidadAves()}\n
-        Reptiles: {Reptil.cantidadReptiles()}\n
-        Peces: {Pez.cantidadPeces()}\n
-        Anfibios: {Anfibio.cantidadAnfibios()}
-        '''
+        str = f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAves: {Ave.cantidadAves()}\nReptiles: {Reptil.cantidadReptiles()}\nPeces: {Pez.cantidadPeces()}\nAnfibios: {Anfibio.cantidadAnfibios()}"
         return str
     def __str__(self):
         if self._zona is None or self._zona==[]:
