@@ -11,7 +11,7 @@ class Animal:
         self._habitat = habitat
         self._genero = genero
         self._zona = None
-        _totalAnimales+=1
+        Animal._totalAnimales+=1
 
     def movimiento(self):
         return "desplazarse"
