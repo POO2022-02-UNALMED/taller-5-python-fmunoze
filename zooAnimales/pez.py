@@ -8,7 +8,7 @@ class Pez(Animal):
     def __init__(self, name=None, edad=0, habitat=None,genero=None,colorEscamas=None,cantidadAletas=0):
         super().__init__(name,edad,habitat,genero)
         self._colorEscamas = colorEscamas
-        self._icantidadAletas = cantidadAletas
+        self._cantidadAletas = cantidadAletas
         Pez._listado.append(self)
     
     def movimiento(self):
