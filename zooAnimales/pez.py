@@ -18,7 +18,7 @@ class Pez(Animal):
         return len(cls._listado)
 
     def movimiento():
-        return ""
+        return "nadar"
 
     @classmethod
     def crearSalmon(cls, nombre, edad, genero):

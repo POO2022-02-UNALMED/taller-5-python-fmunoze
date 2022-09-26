@@ -27,7 +27,7 @@ class Animal:
         '''
         return str
     def __str__(self):
-        if zona is None or zona==[]:
+        if self._zona is None or self._zona==[]:
             str = f'''
             Mi nombre es {self._nombre}, tengo {self._edad}, habito en {self._habitat} y mi genero es {self._genero}
             '''
