@@ -32,12 +32,3 @@ def testToString():
     if ave1.toString() ==  comp:
         ok = True
     assert(ok)
-
-ave1 =Ave("paloma", 5, "ciudad", "F", "gris")
-ok = False
-comp = "Mi nombre es paloma, tengo una edad de 5, habito en ciudad y mi genero es F"
-print(ave1.toString())
-print(comp)
-if ave1.toString() ==  comp:
-    ok = True
-print(ok)
