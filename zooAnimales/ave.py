@@ -15,7 +15,7 @@ class Ave(Animal):
         return len(cls._listado)
 
     def movimiento():
-        return ""
+        return "volar"
 
     @classmethod
     def crearHalcon(cls,nombre, edad, genero):
