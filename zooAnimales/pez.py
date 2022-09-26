@@ -1,43 +1,47 @@
 from zooAnimales.animal import Animal
-class Pez(Animal):
 
-    _listado = []
+class Pez(Animal):
+    _listado=[]
     salmones=0
     bacalaos=0
-
-    def __init__(self, nombre=None, edad=0, habitat=None,genero=None,colorEscamas=None,cantidadAletas=0):
-        super().__init__(nombre,edad,habitat,genero)
-        self._colorEscamas = colorEscamas
-        self._cantidadAletas = cantidadAletas
+    def __init__(self, nombre, edad, habitat, genero, colorEscamas, cantidadAletas):
+        super().__init__(nombre, edad, habitat, genero)
+        self._colorEscamas=colorEscamas
+        self._cantidadAletas=cantidadAletas
         Pez._listado.append(self)
     
-    def movimiento(self):
+    def movimiento():
         return "nadar"
+
+    
     @classmethod
-    def crearSalmon(cls,nombre,edad,genero):
-        cls.salmones+=1
-        return Pez(nombre,edad,"oceano",genero,"rojo",6)
+    def crearSalmon(cls, nombre, edad, genero):
+        Pez.salmones+=1
+        return Pez(nombre, edad, "oceano", genero, "rojo", 6)
+        
     @classmethod
-    def crearBacalao(cls,nombre,edad,genero):
-        cls.bacalaos+=1
-        return Pez(nombre,edad,"oceano",genero,"gris",6)
+    def crearBacalao(cls,nombre, edad, genero):
+        Pez.bacalaos+=1
+        return Pez(nombre, edad, "oceano", genero, "gris", 6)
+    
     @classmethod
     def cantidadPeces(cls):
-        return len(cls.getListado())
+        return len(Pez._listado)
+    
+    def getListado(cls):
+        return Pez._listado
+    
+    def setListado(cls, listado):
+        Pez._listado= listado
+    
+    def setColorEscamas(self, color):
+        self._colorEscamas= color
 
     def getColorEscamas(self):
         return self._colorEscamas
-    def setColorEscamas(self, colorEscamas):
-        self._colorEscamas = colorEscamas
+    
+    def setCantidadAletas(self, aletas):
+        self._cantidadAletas= aletas
 
     def getCantidadAletas(self):
         return self._cantidadAletas
-    def setCantidadAletas(self, cantidadAletas):
-        self._cantidadAletas = cantidadAletas
-
-    @classmethod
-    def getListado(cls):
-        return cls._listado
-    @classmethod
-    def setListado(cls, listado):
-        cls._listado = listado
