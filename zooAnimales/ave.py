@@ -40,3 +40,6 @@ class Ave(Animal):
 
     def setColorPlumas(self, colorPlumas):
         self._colorPlumas = colorPlumas
+
+    def toString(self):
+        return self
